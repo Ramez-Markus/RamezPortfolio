@@ -1,0 +1,331 @@
+:root{
+    --main_color:#121212;
+    --secondry_color:#f66c00;
+    --backlight_color:#1b1b1b;
+    --text_color:#8f8f8f;
+    --border_radius:10px;
+    --linear_gradiant_color1:#f55409;
+    --linear_gradiant_color2:#ea181e;
+    --padding_bottom:15px;
+}
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding:0px ;
+    ;
+}
+html{
+    scroll-behavior:smooth;
+    
+}
+body{
+    font-family: "Nerko One", cursive,Arial;
+    padding-top: 100px;
+    background-color: var(--main_color);
+    color: var(--text_color);
+}
+
+.container{
+    width: 80%;
+    margin: auto;
+}
+/*Nav Section*/
+.navigation{
+    z-index: 2000;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    background-color: var(--main_color);
+}
+ul{
+    padding: 0px;
+}
+nav{
+    position: relative;
+    background-color: var(--main_color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+nav .logo{
+    min-width: 70px;
+    max-width: 70px;
+}
+.logo img{
+    width: 100%;
+}
+nav .Navs{
+    list-style-type: none;
+    display: flex;
+    font-size: 20px;
+    justify-content: space-between;
+    align-items: center;
+}
+nav ul li a{
+    transition: all 0.5s ease;
+}
+nav ul li:hover a{
+    color: var(--secondry_color);
+    transition: all 0.5s ease;
+}
+.active a{
+    color: var(--secondry_color);
+}
+nav ul li a{
+    text-transform: capitalize;
+    color: var(--text_color);
+    text-decoration: none;
+    padding: 0 10px;
+}
+nav .button{
+    background-color: var(--secondry_color);
+    width: 110px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    border-radius:var(--border_radius);
+}
+nav a:hover .button {
+    background: linear-gradient(to right,var(--linear_gradiant_color1),var(--linear_gradiant_color2));
+}
+nav a {
+    color: white;
+    text-decoration: none;
+}
+@media (max-width: 768px) {
+    nav .Navs {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        top: 74px;
+        justify-content: center;
+        align-items: center;
+        min-width: 100%;
+        background-color: var(--backlight_color);
+        display: none;
+    }
+    nav .Navs li {
+        margin-bottom:10px ;
+    }
+    nav .Navs li:first-child{
+        margin-top: 10px;
+    }
+    nav .menu-icon {
+        display: block;
+        font-size: 24px;
+        cursor: pointer;
+        padding:0px 15px ;
+    }
+    
+}
+@media (min-width: 769px) {
+    
+    nav .menu-icon {
+        display: none;
+    }
+}
+/*End of Nav Section*/
+/*Home Section */
+#home{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    overflow: visible;
+}
+#home .home_discription{
+    width: 50%;
+}
+#home .home_discription p:first-child{
+    font-size: 25px;
+    
+}
+#home .home_discription h2{
+    font-weight: 900;
+}
+#home .home_discription h1{
+    color: var(--secondry_color);
+    font-weight: 900;
+
+}
+#home .home_discription .buttons{
+    display: flex;
+}
+#home .home_discription .name,.job_title,p{
+    padding-bottom:15px ;
+    font-size: 40px;
+}
+#home .home_discription .buttons a .button{
+    width: 120px;
+    text-align: center;
+    padding: 10px;
+    color: var(--text_color);
+    border-radius:var(--border_radius);
+
+}
+#home .home_discription .buttons a:first-child .button{
+    background-color: var(--secondry_color);
+    color: white;
+    margin-right: 10px;
+    
+}
+#home .home_discription .buttons a:first-child:hover .button{
+    transition: all 0.5s ease;
+    background:linear-gradient(to right,var(--linear_gradiant_color1),var(--linear_gradiant_color2));
+
+}
+#home .home_discription .buttons a:last-child .button{
+    background-color: var(--backlight_color);
+    width: 120px;
+    border:2px solid var(--text_color);
+    transition: all 0.5s ease;
+}
+#home .home_discription .buttons a:last-child:hover .button{
+    background-color: var(--secondry_color);
+    border-color:white;
+    color: white;
+    transition: all 0.5s ease;
+}
+#home .home_discription .buttons a{
+    color: var(--text_color);
+    text-decoration: none;
+    padding-bottom:10px ;
+}
+#home .home_discription .card{
+    margin-top: 10px;
+    background-color: var(--backlight_color);
+    width: 80%;
+    min-width: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: center;
+    border-radius: var(--border_radius);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+    margin-bottom: 10px;
+}
+#home .home_discription .card p{
+    padding: 10px;
+    font-size: 16px;
+}
+#home .home_discription .card p:first-child{
+    color: var(--secondry_color);
+}
+#home .home_discription .card p:last-child{
+    color: white;
+}
+#home .home_discription .card .line{
+    background-color: var(--text_color);
+    width: 2px;
+    height: 60px;
+    margin: 0px 10px;
+}
+#home .photo_box{
+    position: relative;
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 400px;
+    overflow: hidden;
+    height: 400px;
+    padding-top: 200px;
+    margin-bottom: 30px;
+}
+#home .photo_box .photo{
+    justify-self: flex-end;
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: var(--backlight_color);
+    font-size: 100px;
+    padding-top: 100px;
+    
+}
+#home .photo_box .photo img{
+    position: absolute;
+    width: 100%;
+    margin-bottom: 100px;
+    transform: scale(1.5);
+    top: -22px;
+   
+    
+}
+@media (max-width: 1000px) {
+    #home .home_discription, 
+    #home .photo_box .photo{
+        width: 300px;
+        height: 300px;
+    }
+}
+@media (max-width: 768px) {
+    #home{
+        align-items: center;
+        justify-content: center;
+        flex-direction: column-reverse;
+    }
+    #home .home_discription{
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+
+    }
+    #home .home_discription, 
+    #home .photo_box {
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+    #home .home_discription .name,.job_title,p{
+        font-size: 25px;
+    }
+    #home .photo_box{
+         overflow: hidden;
+        height: 300px;
+        padding-top: 200px;
+        margin-bottom: 40px;
+    } 
+    #home .photo_box .photo{
+        width: 300px;
+        height: 300px;
+    }
+    #home .home_discription .buttons{
+        justify-content: center;
+    }
+}
+@media (max-width: 600px) {
+    #home{
+        height: fit-content;
+    }
+    #home .home_discription{
+        height: fit-content;
+    }
+    
+    #home .home_discription .card{
+        flex-direction: column;
+        width: 50%;
+    }
+    #home .home_discription .card .line{
+        width: 60%;
+        height: 2px;
+        margin: 10px 0px;
+    }
+    #home .photo_box{
+        overflow: hidden;
+        height: 300px;
+        padding-top: 200px;
+        margin-bottom: 30px;
+    }
+    #home .photo_box .photo{
+        width: 250px;
+        height: 250px;
+    }
+}
+/*End of Home Section */
