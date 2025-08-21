@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Portfolio of Ramez Markus - Full Stack .NET Developer">
-    <link rel="icon" href="#">
+    <link rel="icon" href="images/Logo.png">
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="css/all.min.css">
     <!--Css Style file -->
     <link rel="stylesheet" href="css/style.css">
-    <title>Portfolio</title>
+    <title>Ramez Markus Portfolio</title>
     
 </head>
 <body>
@@ -23,16 +23,17 @@
             <div class="logo">
                 <a href=""><img src="images/Logo.png" title="Ramez" alt="RamezLogo"></a>
             </div>
-            <ul class="Navs" id="Navs">
-                <li class="active"><a href="">home</a></li>
-                <li class=""><a href="">about</a></li>
-                <li class=""><a href="">service</a></li>
-                <li class=""><a href="">skills</a></li>
-                <li class=""><a href="">portfolio</a></li>
-                <li class=""><a href="">contact</a></li>
+            <ul class="Navs">
+                <li data-target="home" class="active"><a href="#home">home</a></li>
+                <li data-target="about" class=""><a href="#about">about</a></li>
+                <li data-target="service" class=""><a href="#service">services</a></li>
+                <li data-target="skills" class=""><a href="#skills">skills</a></li>
+                <li data-target="portfolio" class=""><a href="#">portfolio</a></li>
+                <li data-target="Education" class=""><a href="#">Education</a></li>
+                <li data-target="contact" class=""><a href="#">contact</a></li>
             </ul>
             <a href=""><div class="button">Hire Me</div></a>
-            <div class="menu-icon" onclick="document.getElementById('Navs').style.display = (document.getElementById('Navs').style.display === 'flex' ? 'none' : 'flex')"><i class="fa-solid fa-bars"></i></div>
+            <div class="menu-icon"><i class="fa-solid fa-bars"></i></div>
         </nav>
     </div>
     <!--End of Nav Section -->
@@ -46,10 +47,24 @@
             <a href=""><div class="button">Hire Me</div></a>
             <a href="https://docs.google.com/document/d/1CYQZVXzvnV5ctkYzOodhz0vaOa16LKGx" target="_blank"><div class="button">Download Cv</div></a>
             </div>
+             <div class="social-links">
+                <a href="https://www.linkedin.com" target="_blank" class="linkedin">
+                <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://github.com" target="_blank" class="github">
+                <i class="fab fa-github"></i>
+                </a>
+                <a href="https://facebook.com" target="_blank" class="facebook">
+                <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://instagram.com" target="_blank" class="instagram">
+                <i class="fab fa-instagram"></i>
+                </a>
+            </div>
             <div class="card">
                 <div >
                     <p>2+</p>
-                    <p>Experience</p>
+                    <p>Experence</p>
                 </div>
                 <div class="line"></div>
                 <div>
@@ -70,6 +85,155 @@
         </div>
     </section>
     <!--End of Home Section -->
-    
+    <!--About Section -->
+    <section id="about" class="about-me container pTop">
+        <h2 class="headers">About Me</h2>
+        <div class="description">
+            <p><span>Software Engineering student</span> at Helwan University.</br> Skilled in embedded systems programming and full stack web development using .NET technologies.</br> Proficient in C, C#, C++,  Java, and JavaScript with practical experience building embedded solutions and modern, responsive web applications.</br> Demonstrates strong teamwork and commitment to continuous learning and personal growth.</br>Currently seeking an internship or entry-level opportunity to apply technical expertise, contribute to impactful projects, and further develop professional skills.</p>
+        </div>
+    </section>
+     <!--End of About Section -->
+     <!--Service Section -->
+    <section id="service" class="service container pTop">
+        <h2 class="headers">Services</h2>
+        <div class="cards">
+            <div class="card">
+                <i class="fa-solid fa-code"></i>
+                <h2>Web Development</h2>
+                <p>Developing end-to-end web applications using modern technologies and frameworks.</p>
+            </div>
+            <div class="card">
+                <i class="fa-solid fa-desktop"></i>
+                <h2>Front-End Development</h2>
+                <p>Building modern, responsive, and user-friendly interfaces using HTML, CSS, JavaScript.</p>
+
+            </div>
+            <div class="card">
+                <i class="fa-regular fa-file-code"></i>
+                <h2>Back-End Development</h2>
+                <p>Building robust and scalable server-side applications using .NET Core and C#.</p>
+            </div>
+            <div class="card">
+                <i class="fa-solid fa-microchip"></i>
+                <h2>Embedded Systems</h2>
+                <p>Designing and programming microcontroller-based solutions using C and Assembly.<br>Skilled in working with platforms like AVR.</p>
+            </div>
+        </div>
+    </section>
+    <!--End of Service Section -->
+    <!--Skills Section -->
+    <section id="skills" class="skills container pTop">
+        <h2 class="headers wd">Skills</h2>
+        <div class="cards">
+        <div class="frontend card">
+            <h2>Front-End</h2>
+            <div class="technology">
+                <h3>HTML</h3>
+                <div class="bar">
+                    <div class="bar-progress HTML"></div>
+                </div>
+            </div>
+            <div class="technology">
+                <h3>CSS</h3>
+                <div class="bar">
+                    <div class="bar-progress CSS"></div>
+                </div>
+            </div>
+            <div class="technology">
+                <h3>JS</h3>
+                <div class="bar">
+                    <div class="bar-progress JS"></div>
+                </div>
+            </div>
+            <div class="technology">
+                <h3>React</h3>
+                <div class="bar">
+                    <div class="bar-progress React"></div>
+                </div>
+            </div>
+        </div>
+        <div class="backend card">
+            <h2>Back-End</h2>
+            <div class="technology">
+                <h3>SQL</h3>
+                <div class="bar">
+                    <div class="bar-progress SQL"></div>
+                </div>
+            </div>
+            <div class="technology">
+                <h3>C#</h3>
+                <div class="bar">
+                    <div class="bar-progress Csharp"></div>
+                </div>
+            </div>
+            <div class="technology">
+                <h3>.NET</h3>
+                <div class="bar">
+                    <div class="bar-progress NET"></div>
+                </div>
+            </div>
+            <div class="technology">
+                <h3>RESTful</h3>
+                <div class="bar">
+                    <div class="bar-progress RESTful"></div>
+                </div>
+            </div>
+        </div>
+        <div class="embedded card">
+            <h2>Embbeded System</h2>
+            <div class="technology">
+                <h3>C</h3>
+                <div class="bar">
+                    <div class="bar-progress C"></div>
+                </div>
+            </div>
+            <div class="technology">
+                <h3>C++</h3>
+                <div class="bar">
+                    <div class="bar-progress Cpp"></div>
+                </div>
+            </div>
+            <div class="technology">
+                <h3>AVR</h3>
+                <div class="bar">
+                    <div class="bar-progress AVR"></div>
+                </div>
+            </div>
+            <div class="technology">
+                <h3>ARM</h3>
+                <div class="bar">
+                    <div class="bar-progress ARM"></div>
+                </div>
+            </div>
+        </div>
+        <div class="others card">
+            <h2>other Technologies</h2>
+            <div class="technology">
+                <h3>Python</h3>
+                <div class="bar">
+                    <div class="bar-progress Python"></div>
+                </div>
+            </div>
+            <div class="technology">
+                <h3>DS</h3>
+                <div class="bar">
+                    <div class="bar-progress DS"></div>
+                </div>
+            </div>
+            <div class="technology">
+                <h3>Java</h3>
+                <div class="bar">
+                    <div class="bar-progress Java"></div>
+                </div>
+            </div>
+            
+        </div>
+        </div>
+
+    </section>
+    <!--End of Skills Section -->
+
+
+<script src="js/script.js"></script>
 </body>
 </html>

@@ -1,33 +1,36 @@
 :root{
     --main_color:#121212;
+    --main_color:#e1e1e1; 
     --secondry_color:#f66c00;
+    /* --secondry_color:#315bf3; */
     --backlight_color:#1b1b1b;
     --text_color:#8f8f8f;
     --border_radius:10px;
     --linear_gradiant_color1:#f55409;
     --linear_gradiant_color2:#ea181e;
     --padding_bottom:15px;
+    --box_shadow: rgba(0, 0, 0, 0.5) 0px 4px 10px;
 }
 *{
     box-sizing: border-box;
     margin: 0px;
     padding:0px ;
-    ;
 }
 html{
     scroll-behavior:smooth;
     
 }
 body{
+    height: 400vh;
     font-family: "Nerko One", cursive,Arial;
-    padding-top: 100px;
     background-color: var(--main_color);
     color: var(--text_color);
 }
 
 .container{
-    width: 80%;
-    margin: auto;
+max-width: 1600px;
+  width: 80%;
+  margin: auto;
 }
 /*Nav Section*/
 .navigation{
@@ -37,6 +40,9 @@ body{
     top: 0;
     right: 0;
     background-color: var(--main_color);
+}
+a{
+    padding: 0px;
 }
 ul{
     padding: 0px;
@@ -94,7 +100,7 @@ nav a {
     color: white;
     text-decoration: none;
 }
-@media (max-width: 768px) {
+@media (max-width: 905px) {
     nav .Navs {
         position: absolute;
         display: flex;
@@ -120,21 +126,27 @@ nav a {
     }
     
 }
-@media (min-width: 769px) {
+@media (min-width: 904px) {
     
     nav .menu-icon {
+        display: none;
+    }
+}
+@media (max-width: 320px){
+    nav .button{
         display: none;
     }
 }
 /*End of Nav Section*/
 /*Home Section */
 #home{
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
     overflow: visible;
+    
 }
 #home .home_discription{
     width: 50%;
@@ -154,7 +166,7 @@ nav a {
 #home .home_discription .buttons{
     display: flex;
 }
-#home .home_discription .name,.job_title,p{
+#home .home_discription .name,#home .home_discription .job_title,#home .home_discription p{
     padding-bottom:15px ;
     font-size: 40px;
 }
@@ -192,7 +204,7 @@ nav a {
 #home .home_discription .buttons a{
     color: var(--text_color);
     text-decoration: none;
-    padding-bottom:10px ;
+    padding-bottom:10px;
 }
 #home .home_discription .card{
     margin-top: 10px;
@@ -204,7 +216,7 @@ nav a {
     justify-content: space-evenly;
     text-align: center;
     border-radius: var(--border_radius);
-    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+    box-shadow: var(--box_shadow);
     margin-bottom: 10px;
 }
 #home .home_discription .card p{
@@ -223,6 +235,34 @@ nav a {
     height: 60px;
     margin: 0px 10px;
 }
+ .social-links {
+      display: flex;
+      gap: 20px;
+      justify-content: start;
+      align-items: center;
+      margin: 10px 0px;
+    }
+
+    .social-links a {
+      text-decoration: none;
+      font-size: 30px;
+      color: #fff;
+      width: 50px;
+      height: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+      transition: 0.3s ease;
+    }
+    .social-links a.linkedin { background: var(--backlight_color); }
+    .social-links a.github   { background: var(--backlight_color); }
+    .social-links a.facebook { background: var(--backlight_color); }
+    .social-links a.instagram{ background: var(--backlight_color); }
+    .social-links a:hover {
+      transform: scale(1.1);
+      background-color: var(--secondry_color);
+    }
 #home .photo_box{
     position: relative;
     width: 50%;
@@ -254,8 +294,8 @@ nav a {
     width: 100%;
     margin-bottom: 100px;
     transform: scale(1.5);
-    top: -22px;
-   
+    top: -10px;
+    filter: drop-shadow(0px 9px 10px var(--text_color)) invert(0%);
     
 }
 @media (max-width: 1000px) {
@@ -266,6 +306,9 @@ nav a {
     }
 }
 @media (max-width: 768px) {
+    body{
+        padding-top: 100px;
+    }
     #home{
         align-items: center;
         justify-content: center;
@@ -283,7 +326,7 @@ nav a {
         justify-content: center;
         align-items: center;
     }
-    #home .home_discription .name,.job_title,p{
+    #home .home_discription .name,#home .home_discription .job_title,#home .home_discription p{
         font-size: 25px;
     }
     #home .photo_box{
@@ -298,6 +341,7 @@ nav a {
     }
     #home .home_discription .buttons{
         justify-content: center;
+        
     }
 }
 @media (max-width: 600px) {
@@ -310,7 +354,7 @@ nav a {
     
     #home .home_discription .card{
         flex-direction: column;
-        width: 50%;
+        max-width: 50%;
     }
     #home .home_discription .card .line{
         width: 60%;
@@ -328,4 +372,320 @@ nav a {
         height: 250px;
     }
 }
+@media (max-width: 320px) {
+    #home .home_discription .buttons{
+        justify-content: center;
+        flex-direction: column;
+    }
+
+}
 /*End of Home Section */
+/*About Section */
+.pTop{
+   padding-top: 80px;
+   
+}
+.headers{
+    text-align: center;
+    width: 100%;
+    padding: 10px;
+    font-size: xx-large;
+    position: relative;
+    width: fit-content;
+    margin: auto;
+    margin-bottom: 50px;
+    
+}
+.headers::before{
+    content: "/\\";
+    position: absolute;
+    width: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    height: 10px;
+    left:-40px;
+    background-color: var(--secondry_color);
+}
+.headers::after{
+    content: "/\\";
+    position: absolute;
+    transform: translate(50%,-50%);
+    width: 50%;
+    height: 10px;
+    top: 50%;
+    right:-40px;
+    background-color: var(--secondry_color);
+}
+#about .description{
+    background-color: var(--backlight_color);
+    border-radius: var(--border_radius);
+    padding: 15px;
+    box-shadow: var(--box_shadow);
+}
+#about .description p span{
+    color: var(--secondry_color);
+    font-weight: bold;
+}
+@media (max-width:1000px) {
+    #about .description p{
+        font-size: 25px;
+    }
+    
+}
+@media (min-width:1001px) {
+    #about .description p{
+        font-size: 30px;
+    }
+    
+}
+/*End of About Section */
+/*Service Section */
+.service .cards{
+    row-gap: 15px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(350px,1fr)) ;
+    column-gap: 15px;
+}
+.service .cards .card{
+    
+    display:flex ;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    min-height:250px ;
+    overflow:hidden ;
+    background-color: var(--backlight_color);
+    text-align: center;
+    padding: 10px;
+    border-radius: var(--border_radius);
+    box-shadow: var(--box_shadow);
+    transition: 1s;
+
+}
+.service .cards .card i{
+    transition: 1s ;
+    font-size: 30px;
+}
+.service .cards .card h2{
+    color: var(--secondry_color);
+}
+.service .cards .card p{
+    font-size: 20px;
+}
+.service .cards .card:hover{
+    border-bottom: 2px solid var(--secondry_color);
+    transition: 0.2s ;
+}
+.service .cards .card:hover i{
+    color: var(--secondry_color);
+    transition: 1s ;
+}
+@media (max-width:450px) {
+    .service .cards{
+            grid-template-columns: repeat(auto-fill,minmax(250px,1fr)) ;
+
+    }
+}
+/*End of Service Section */
+/*Skills Section */
+.wd::after{
+    width: 75%;
+}
+.wd::before{
+    width: 75%;
+}
+#skills .cards{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(350px,1fr)) ;
+    column-gap: 15px;
+    row-gap: 15px;
+}
+#skills .cards .card{
+    background-color: var(--backlight_color);
+    border-radius: var(--border_radius);
+    box-shadow: var(--box_shadow);
+    min-height:250px ;
+   
+}
+
+#skills .cards .card{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding:0px 30px;
+}
+#skills .cards .card:hover{
+     border-bottom: 2px solid var(--secondry_color);
+    transition: 0.2s ;
+}
+#skills .cards .card .technology{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#skills .cards .card .technology h3{
+    font-size: x-large;
+}
+#skills .cards .card .technology .bar{
+     width: 70%;
+     background-color:var(--main_color);
+     height: 35%;
+     border-radius: 15px;
+}
+#skills .cards .card .technology .bar .bar-progress{
+    width: 0%;
+    filter: grayscale(0.1);
+    background-color: var(--secondry_color);
+    height: 100%;
+    border-radius: var(--border_radius);
+    color: white;
+    text-align: center;
+    position: relative;
+}
+.bar-progress::after {
+  content: "%";
+  position: absolute;
+  top: -1.8rem; 
+  right: 0; 
+  transform: translateX(50%);
+  background: var(--secondry_color);
+  color: #fff;
+  font-size: 0.80rem;
+  padding: 2px 6px;
+  border-radius: 5px;
+  white-space: nowrap;
+}
+#skills .cards .card h2:first-child{
+     text-align: center;
+     justify-self: center;
+}
+/* front end progrees */
+#skills .cards .card .technology .bar .HTML{
+    width: 100%;
+}
+#skills .cards .card .technology .bar .HTML::after{
+    content: "100%";
+}
+#skills .cards .card .technology .bar .CSS{
+    width: 95%;
+}
+#skills .cards .card .technology .bar .CSS::after{
+    content: "95%";
+}
+#skills .cards .card .technology .bar .JS{
+    width: 85%;
+}
+#skills .cards .card .technology .bar .JS::after{
+    content: "85%";
+}
+#skills .cards .card .technology .bar .React{
+    width: 50%;
+}
+#skills .cards .card .technology .bar .React::after{
+    content: "50%";
+}
+
+/* back end end progrees */
+#skills .cards .card .technology .bar .SQL{
+    width: 100%;
+}
+#skills .cards .card .technology .bar .SQL::after{
+    content: "100%";
+}
+#skills .cards .card .technology .bar .Csharp{
+    width: 90%;
+}
+#skills .cards .card .technology .bar .Csharp::after{
+    content: "90%";
+}
+#skills .cards .card .technology .bar .NET{
+    width: 70%;
+}
+#skills .cards .card .technology .bar .NET::after{
+    content: "70%";
+}
+#skills .cards .card .technology .bar .RESTful{
+    width: 0%;
+}
+#skills .cards .card .technology .bar .RESTful::after{
+    content: "0%";
+}
+/* Embbeded System end progrees */
+#skills .cards .card .technology .bar .C{
+    width: 100%;
+}
+#skills .cards .card .technology .bar .C::after{
+    content: "100%";
+}
+#skills .cards .card .technology .bar .Cpp{
+    width: 100%;
+}
+#skills .cards .card .technology .bar .Cpp::after{
+    content: "100%";
+}
+#skills .cards .card .technology .bar .AVR{
+    width: 50%;
+}
+#skills .cards .card .technology .bar .AVR::after{
+    content: "50%";
+}
+#skills .cards .card .technology .bar .RESTful{
+    width: 0%;
+}
+#skills .cards .card .technology .bar .RESTful::after{
+    content: "0%";
+}
+/* Embbeded System progrees */
+#skills .cards .card .technology .bar .C{
+    width: 100%;
+}
+#skills .cards .card .technology .bar .C::after{
+    content: "100%";
+}
+#skills .cards .card .technology .bar .Cpp{
+    width: 100%;
+}
+#skills .cards .card .technology .bar .Cpp::after{
+    content: "100%";
+}
+#skills .cards .card .technology .bar .AVR{
+    width: 50%;
+}
+#skills .cards .card .technology .bar .AVR::after{
+    content: "50%";
+}
+#skills .cards .card .technology .bar .ARM{
+    width: 0%;
+}
+#skills .cards .card .technology .bar .ARM::after{
+    content: "0%";
+}
+/*other Technologies progrees*/
+#skills .cards .card .technology .bar .Python{
+    width: 50%;
+}
+#skills .cards .card .technology .bar .Python::after{
+    content: "50%";
+}
+#skills .cards .card .technology .bar .DS{
+    width: 100%;
+}
+#skills .cards .card .technology .bar .DS::after{
+    content: "100%";
+}
+#skills .cards .card .technology .bar .Java{
+    width: 100%;
+}
+#skills .cards .card .technology .bar .Java::after{
+    content: "100%";
+}
+@media (max-width:550px) {
+    #skills .cards{
+    grid-template-columns: repeat(auto-fill,minmax(250px,1fr)) ;
+    }
+    #skills .cards .card .technology .bar{
+        width: 60%;
+    }
+
+}
+/*End of skills Section */
